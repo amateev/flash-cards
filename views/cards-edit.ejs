@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flash Cards</title>
+
+  <!-- bootstrap goes first-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <!-- reset css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  <!-- style css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <style type="text/css">
+       .jumbotron {
+        background-color: white;
+       }
+
+    </style>
+
+</head>
+<body>
+      <!-- navigation bar -->
+  <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Flash Cards</a>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- end of nav bar -->
+
+<!--Wrap main contant in a div .wrap-->
+<div id="wrap">
+  
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-sm-3">
+                <div class="list-group">
+                      <a href="http://localhost:3000/" class="list-group-item list-group-item-action">My Sets of Cards</a>
+                      <a href="http://localhost:3000/new-card" class="list-group-item list-group-item-action">Create a New Flash Card</a>
+                      <a href="http://localhost:3000/cards" class="list-group-item list-group-item-action">View all Cards</a>
+                      <a href="http://localhost:3000/cards-edit" class="list-group-item list-group-item-action active">Edit Cards</a>
+                </div>
+        </div>
+
+
+        <div class="col-sm-9">
+
+               <div class="jumbotron jumbotron-fluid">
+                                
+                  <h1 class="display-4">View All Cards</h1>
+                  <br>
+                  <hr class="my-4">
+
+                  <ul class="list-group list-group-flush">
+
+                    <li>
+                   
+                                <div class="front_view">
+                                    <!-- front content -->
+                                    <% for (var i=0; i<cards.length; i++) { %>
+                                    <div class="card">
+                                        <div class="card-body">
+                                           
+                                            <span><%=   cards[i].question  %></span>
+                                            <hr class="my-4">
+                                            <span><%=   cards[i].answer  %></span>                                               
+                                        </div>
+                                    </div>
+                                    <% } %>
+                                </div>
+                              
+
+                              </li>
+
+
+                    </ul>
+                </div>
+                
+        </div>
+
+
+    </div>
+</div>
+<!-- end of .wrap -->
+
+
+
+
+
+
+
+
+
+<!--Start of the Footer-->
+<!-- <footer class="footer">
+    <div class="container">
+          <span class="text-muted">Copyright &copy</span> 
+    </div>
+</footer> -->
+   
+    <!--End of the Footer-->
+
+
+  <!-- jquery link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap link -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- jquery code -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>

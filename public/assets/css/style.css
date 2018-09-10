@@ -1,0 +1,89 @@
+body {
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-size: 18px;
+	color: #333;
+	background: white;
+}
+
+/*--Styles for Sticky Footer--*/
+        html, body {
+            height: 100%;
+        }
+#wrap {
+            min-height: 100%;
+            height: auto;
+            margin: 0 auto -60px;
+            padding: 0 0 60px;
+}
+.footer {
+            padding: 20px;
+            height: 60px;
+            color: #9d9d9d;
+            background-color: #222;
+            text-align: center;
+        }        
+ /*--Styles for Sticky Footer--*/       
+ 
+ /*Cards*/
+.card {
+	height: 480px;
+	background: #eaeaea;
+	text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    overflow: visible;
+vertical-align: middle;
+line-height: 50px; 
+}
+
+
+/*card flipping animation*/
+/* entire container, keeps perspective */
+/*flip on click of a mouse*/
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+.flip-container,
+.front,
+.back {
+  width: 727.5px;
+  height: 480px;
+}
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.back {
+  transform: rotateY(180deg);
+}
+/*end of card flipping animation*/
+
+.btn {
+  margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
